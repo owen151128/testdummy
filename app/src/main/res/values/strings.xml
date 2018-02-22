@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">testdummy</string>
+    <string name="image_view">TestImageView</string>
 </resources>
