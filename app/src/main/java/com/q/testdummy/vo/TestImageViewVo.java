@@ -6,6 +6,11 @@ public class TestImageViewVo implements TestImageViewAdapterContract.Model {
     private int image;
     private String text;
 
+    public TestImageViewVo(int image, String text) {
+        this.image = image;
+        this.text = text;
+    }
+
     @Override
     public int getImage() {
         return image;
