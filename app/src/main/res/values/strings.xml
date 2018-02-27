@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">testdummy</string>
     <string name="image_view">TestImageView</string>
+    <string name="main_text">Save Text</string>
+    <string name="save_text">Save</string>
 </resources>
