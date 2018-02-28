@@ -1,5 +1,7 @@
 package com.q.testdummy.imageview;
 
+import android.graphics.drawable.BitmapDrawable;
+
 public interface TestImageViewAdapterContract {
 
     interface View {
@@ -9,9 +11,9 @@ public interface TestImageViewAdapterContract {
 
     interface Model {
 
-        int getImage();
+        BitmapDrawable getDrawable();
 
-        void setImage(int image);
+        void setDrawable(BitmapDrawable image);
 
         String getText();
 
