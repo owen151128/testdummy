@@ -1,24 +1,26 @@
 package com.q.testdummy.vo;
 
+import android.graphics.drawable.BitmapDrawable;
+
 import com.q.testdummy.imageview.TestImageViewAdapterContract;
 
 public class TestImageViewVo implements TestImageViewAdapterContract.Model {
-    private int image;
+    private BitmapDrawable drawable;
     private String text;
 
-    public TestImageViewVo(int image, String text) {
-        this.image = image;
+    public TestImageViewVo(BitmapDrawable drawable, String text) {
+        this.drawable = drawable;
         this.text = text;
     }
 
     @Override
-    public int getImage() {
-        return image;
+    public BitmapDrawable getDrawable() {
+        return drawable;
     }
 
     @Override
-    public void setImage(int image) {
-        this.image = image;
+    public void setDrawable(BitmapDrawable image) {
+        this.drawable = image;
     }
 
     @Override
