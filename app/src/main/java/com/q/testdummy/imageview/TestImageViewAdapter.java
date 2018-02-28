@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.q.testdummy.R;
-import com.q.testdummy.databinding.TestImageViewBinding;
+import com.q.testdummy.databinding.TestImageItemBinding;
 import com.q.testdummy.vo.TestImageViewVo;
 
 import java.util.ArrayList;
@@ -22,8 +22,8 @@ public class TestImageViewAdapter extends RecyclerView.Adapter<TestImageViewAdap
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
-        TestImageViewBinding binding = DataBindingUtil.inflate(inflater,
-                R.layout.test_image_view, viewGroup, false);
+        TestImageItemBinding binding = DataBindingUtil.inflate(inflater,
+                R.layout.test_image_item, viewGroup, false);
         return new ViewHolder(binding);
     }
 
@@ -39,9 +39,9 @@ public class TestImageViewAdapter extends RecyclerView.Adapter<TestImageViewAdap
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        private TestImageViewBinding mBinding;
+        private TestImageItemBinding mBinding;
 
-        private ViewHolder(TestImageViewBinding binding) {
+        private ViewHolder(TestImageItemBinding binding) {
             super(binding.getRoot());
             mBinding = binding;
         }
