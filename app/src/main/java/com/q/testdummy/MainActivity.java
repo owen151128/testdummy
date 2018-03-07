@@ -6,7 +6,10 @@ import android.os.SystemClock;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.text.Html;
+import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.q.testdummy.databinding.ActivityMainBinding;
@@ -50,14 +53,17 @@ public class MainActivity extends RxAppCompatActivity implements MainContract.Vi
 
     @Override
     public void showToast(String text) {
-        Toast toast = Toast.makeText(getApplicationContext(), Html.fromHtml("<font color='#ffffff'><b>" + text + "</b></font>"), Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(getApplicationContext(), Html.fromHtml("<font color='#ffffff'>" + text + "</font>"), Toast.LENGTH_SHORT);
         toast.getView().setBackgroundResource(R.drawable.custom_toast);
         toast.show();
     }
 
     @Override
     public void showToast(int resourceId) {
-        Toast toast = Toast.makeText(getApplicationContext(), Html.fromHtml("<font color='#ffffff'><b>" + getString(resourceId) + "</b></font>"), Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(getApplicationContext(), Html.fromHtml("<font color='#ffffff'>" + getString(resourceId) + "</font>"), Toast.LENGTH_SHORT);
+        ViewGroup group = (ViewGroup) toast.getView();
+        TextView textView = (TextView) group.getChildAt(0);
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
         toast.getView().setBackgroundResource(R.drawable.custom_toast);
         toast.show();
     }
