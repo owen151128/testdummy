@@ -12,7 +12,7 @@ import com.q.testdummy.vo.TestImageViewVo;
 
 import java.util.ArrayList;
 
-public class TestImageViewAdapter extends RecyclerView.Adapter<TestImageViewAdapter.ViewHolder> {
+public class TestImageViewAdapter extends RecyclerView.Adapter<TestImageViewAdapter.ViewHolder> implements TestImageViewAdapterContract.View {
     private ArrayList<TestImageViewVo> voList;
 
     public TestImageViewAdapter(ArrayList<TestImageViewVo> items) {
@@ -36,6 +36,27 @@ public class TestImageViewAdapter extends RecyclerView.Adapter<TestImageViewAdap
     @Override
     public int getItemCount() {
         return voList.size();
+    }
+
+    @Override
+    public void refresh() {
+        notifyDataSetChanged();
+    }
+
+    @Override
+    public void setList(ArrayList<TestImageViewVo> items) {
+        this.voList = items;
+    }
+
+    @Override
+    public void add(TestImageViewVo vo) {
+        voList.add(vo);
+
+    }
+
+    @Override
+    public void removeAll() {
+        voList.clear();
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
