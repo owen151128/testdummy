@@ -1,7 +1,11 @@
 <resources>
-    <string name="app_name">testdummy</string>
+    <string name="app_name">텍스트 저장 더미</string>
     <string name="image_view">TestImageView</string>
-    <string name="main_text">Save Text</string>
-    <string name="button_text">Save</string>
-    <string name="edit_hint">input Text</string>
+    <string name="main_text">텍스트 저장</string>
+    <string name="button_text">저장</string>
+    <string name="edit_hint">텍스트를 입력해주세요.</string>
+    <string name="edit_text_null_toast">저장할 문자를 입력 해 주세요.</string>
+    <string name="fragment_clear_toast">저장된 사진과 텍스트가 모두 초기화 되었습니다.</string>
+    <string name="fragment_empty_toast">저장된 사진과 텍스트가 없습니다. 저장 후에 다시 시도해 주세요.</string>
+    <string name="back_button_toast">나가려면 BACK 버튼을 한번더 눌러주세요.</string>
 </resources>
