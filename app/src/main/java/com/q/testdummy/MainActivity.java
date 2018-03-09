@@ -54,6 +54,9 @@ public class MainActivity extends RxAppCompatActivity implements MainContract.Vi
     @Override
     public void showToast(String text) {
         Toast toast = Toast.makeText(getApplicationContext(), Html.fromHtml("<font color='#ffffff'>" + text + "</font>"), Toast.LENGTH_SHORT);
+        ViewGroup group = (ViewGroup) toast.getView();
+        TextView textView = (TextView) group.getChildAt(0);
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
         toast.getView().setBackgroundResource(R.drawable.custom_toast);
         toast.show();
     }
@@ -63,7 +66,7 @@ public class MainActivity extends RxAppCompatActivity implements MainContract.Vi
         Toast toast = Toast.makeText(getApplicationContext(), Html.fromHtml("<font color='#ffffff'>" + getString(resourceId) + "</font>"), Toast.LENGTH_SHORT);
         ViewGroup group = (ViewGroup) toast.getView();
         TextView textView = (TextView) group.getChildAt(0);
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
         toast.getView().setBackgroundResource(R.drawable.custom_toast);
         toast.show();
     }
